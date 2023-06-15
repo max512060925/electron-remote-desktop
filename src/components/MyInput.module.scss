@@ -1,0 +1,18 @@
+.my-input {
+  @apply relative;
+  :global {
+    .placeholder-label {
+      // text-[#dcdcdc]
+      @apply absolute  px-2 top-1/2 rounded bg-white pointer-events-none z-[12] leading-5 -translate-y-1/2 transition-all duration-[0.45s] ease-[cubic-bezier(0.23,1,0.32,1)];
+      &.textarea {
+        @apply top-3;
+      }
+      &.acitive {
+        @apply -top-1 text-primary;
+      }
+      &.error {
+        @apply text-error;
+      }
+    }
+  }
+}

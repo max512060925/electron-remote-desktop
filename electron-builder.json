@@ -1,0 +1,49 @@
+{
+  "productName": "remote-desktop",
+  "appId": "com.maxwinnie.app",
+  "artifactName": "iBot_${arch}_${version}.${ext}",
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "extraResources": [
+    "release",
+    "512x512.png",
+    "config.ini"
+  ],
+  "directories": {
+    "buildResources": "out",
+    "output": "out"
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": true,
+    "allowElevation": true,
+    "allowToChangeInstallationDirectory": true,
+    "installerIcon": "icon.ico",
+    "uninstallerIcon": "icon.ico",
+    "installerHeaderIcon": "icon.ico",
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "uninstallDisplayName": "${productName} ${version}",
+    "language": 4,
+    "include": "installer.nsh"
+  },
+  "win": {
+    "icon": "icon.ico",
+    "target": [
+      "nsis"
+    ]
+  },
+  "mac": {
+    "target": "pkg",
+    "icon": "512x512.png"
+  },
+  "pkg": {
+    "allowAnywhere": false,
+    "allowCurrentUserHome": false,
+    "allowRootDirectory": false,
+    "isRelocatable": false,
+    "isVersionChecked": false
+  }
+}

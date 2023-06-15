@@ -1,0 +1,7 @@
+@import '@unocss/reset/tailwind-compat.css';
+#root {
+  @apply w-full h-screen overflow-hidden;
+}
+// .svg-icon {
+//   @apply w-[1em] h-[1em] align-[-0.15em] fill-current overflow-hidden outline-none;
+// }
